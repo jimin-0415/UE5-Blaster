@@ -28,12 +28,24 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	/// Axis X [Direction] 방향으로 움직입니다.
+	void MoveForward( float value );
+
+	/// Axis Y 방향으로 움직입입니다.
+	void MoveRight( float value );
+
+	/// Yaw 기준으로 회전합니다.
+	void Turn( float value );
+
+	/// Pitch 기준으로 회전합니다.
+	void LookUp( float value );
+
 private:
 	/// Spring Arm Component
 	UPROPERTY( VisibleAnyWhere, Category = Camera )
-	class USpringArmComponent* m_CameraBoom;
+		class USpringArmComponent* m_CameraBoom;
 
 	/// Camera Component
 	UPROPERTY( VisibleAnyWhere, Category = Camera )
-	class UCameraComponent* m_FollowCamera;
+		class UCameraComponent* m_FollowCamera;
 };
