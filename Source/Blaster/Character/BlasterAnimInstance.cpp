@@ -6,6 +6,9 @@
 #include "GameFramework/CharacterMovementComponent.h"
 
 
+////////////////////////////////////////////////////////////////////////////
+/// 애니메이션을 초기화 한다
+////////////////////////////////////////////////////////////////////////////
 void UBlasterAnimInstance::NativeInitializeAnimation()
 {
 	Super::NativeInitializeAnimation();
@@ -13,6 +16,9 @@ void UBlasterAnimInstance::NativeInitializeAnimation()
 	m_BlasterCharacter = Cast< ABlasterCharacter >(TryGetPawnOwner());
 }
 
+////////////////////////////////////////////////////////////////////////////
+/// 애니메이션을 갱신한다.
+////////////////////////////////////////////////////////////////////////////
 void UBlasterAnimInstance::NativeUpdateAnimation(float deltaTime)
 {
 	Super::NativeUpdateAnimation(deltaTime);
